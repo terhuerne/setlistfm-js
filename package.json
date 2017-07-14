@@ -1,7 +1,7 @@
 {
   "name": "setlistfm-js",
-  "version": "1.0.0",
-  "description": "Javascript API wrapper for the setlist.fm API.",
+  "version": "1.0.1",
+  "description": "This is an easy to use, promise based API wrapper for the most recent version of the setlist.fm Web API. Made with love and JavaScript.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
@@ -16,7 +16,9 @@
     "api",
     "wrapper",
     "concerts",
-    "nodejs"
+    "nodejs",
+    "api-wrapper",
+    "api-token"
   ],
   "author": "Johannes Terhuerne <johannes@terhuerne.org>",
   "license": "MIT",
