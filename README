@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/terhuerne/setlistfm-js.svg?branch=master)](https://travis-ci.org/terhuerne/setlistfm-js)
 
-#setlist.fm API Wrapper for Node.js
+#setlist.fm API Wrapper for node.js
 
 This is an easy implementation of the setlist.fm API for Node.js. To start right away enter the following lines to your command line:
 
