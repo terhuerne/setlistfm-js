@@ -1,0 +1,38 @@
+{
+  "name": "setlistfm-js",
+  "version": "1.0.0",
+  "description": "Javascript API wrapper for the setlist.fm API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terhuerne/setlistfm-js.git"
+  },
+  "keywords": [
+    "setlist.fm",
+    "setlist",
+    "api",
+    "wrapper",
+    "concerts",
+    "nodejs"
+  ],
+  "author": "Johannes Terhuerne <johannes@terhuerne.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/terhuerne/setlistfm-js/issues"
+  },
+  "homepage": "https://github.com/terhuerne/setlistfm-js#readme",
+  "dependencies": {
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4"
+  },
+  "devDependencies": {
+    "debug": "^2.6.8",
+    "diff": "^3.3.0",
+    "glob": "^7.1.2",
+    "mocha": "^3.4.2",
+    "should": "^11.2.1"
+  }
+}
