@@ -26,7 +26,9 @@
     "url": "https://github.com/terhuerne/setlistfm-js/issues"
   },
   "homepage": "https://github.com/terhuerne/setlistfm-js#readme",
-  "dependencies": {},
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  },
   "devDependencies": {
     "debug": "^2.6.8",
     "diff": "^3.3.0",
