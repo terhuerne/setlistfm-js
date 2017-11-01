@@ -2,7 +2,7 @@
 
 # setlist.fm API Wrapper for Node.js
 
-This is an easy implementation of the setlist.fm API for Node.js. To start right away enter the following lines to your command line:
+This is an easy implementation of the setlist.fm API for Node.js and React. To start right away enter the following lines to your command line:
 
 ```
 npm install setlistfm-js --save
@@ -99,7 +99,7 @@ setlistfmClient.searchCountries()
 
 ### Search for Setlists
 ```javascript
-setlistfmClient.searchCountries({
+setlistfmClient.searchSetlists({
 	artistName: "Linkin Park"
 })
 	.then(function(results) {
@@ -175,7 +175,8 @@ setlistfmClient.getUserEdited("terhuerne", {
 	p: 1
 })
 	.then(function(setlists) {
-		// Returns setlists that a user has edited	})
+		// Returns setlists that a user has edited	
+	})
 	.catch(function(error) {
 		// Returns error
 	});
