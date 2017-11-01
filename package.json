@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/terhuerne/setlistfm-js#readme",
   "dependencies": {
-    "isomorphic-fetch": "^2.2.1"
+    "isomorphic-fetch": "^2.2.1",
+    "query-string": "^5.0.1"
   },
   "devDependencies": {
     "debug": "^2.6.8",
