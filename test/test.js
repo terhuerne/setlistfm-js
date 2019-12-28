@@ -16,7 +16,8 @@ describe("Constructor", function() {
   it("Should throw an error if no API key is defined", function() {
     var setlistfmClient = new setlistfm();
     setlistfmClient.getArtist()
-      .then(function(results){
+      .then(function(results) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -52,7 +53,8 @@ describe("getArtist", function() {
       language: "de"
     });
     setlistfmClient.getArtist()
-      .then(function(artist, error) {
+      .then(function(artist) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -101,7 +103,8 @@ describe("getArtistSetlists", function() {
       language: "de"
     });
     setlistfmClient.getArtistSetlists()
-      .then(function(artist, error) {
+      .then(function(artist) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -137,7 +140,8 @@ describe("getCity", function() {
       language: "de"
     });
     setlistfmClient.getCity()
-      .then(function(city, error) {
+      .then(function(city) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -177,7 +181,8 @@ describe("searchArtists", function() {
       language: "de"
     });
     setlistfmClient.searchArtists()
-      .then(function(results, error) {
+      .then(function(results) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -217,7 +222,8 @@ describe("searchCities", function() {
       language: "de"
     });
     setlistfmClient.searchCities()
-      .then(function(results, error) {
+      .then(function(results) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -283,7 +289,8 @@ describe("searchSetlists", function() {
       language: "de"
     });
     setlistfmClient.searchSetlists()
-      .then(function(results, error) {
+      .then(function(results, error) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -323,7 +330,8 @@ describe("searchVenues", function() {
       language: "de"
     });
     setlistfmClient.searchVenues()
-      .then(function(results, error) {
+      .then(function(results, error) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -359,7 +367,8 @@ describe("getSetlistByVersion", function() {
       language: "de"
     });
     setlistfmClient.getSetlistByVersion()
-      .then(function(setlist, error) {
+      .then(function(setlist) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -395,7 +404,8 @@ describe("getSetlist", function() {
       language: "de"
     });
     setlistfmClient.getSetlist()
-      .then(function(setlist, error) {
+      .then(function(setlist) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -431,7 +441,8 @@ describe("getUser", function() {
       language: "de"
     });
     setlistfmClient.getUser()
-      .then(function(setlist, error) {
+      .then(function(setlist) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -480,7 +491,8 @@ describe("getUserAttended", function() {
       language: "de"
     });
     setlistfmClient.getUserAttended()
-      .then(function(artist, error) {
+      .then(function(artist) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -529,7 +541,8 @@ describe("getUserEdited", function() {
       language: "de"
     });
     setlistfmClient.getUserEdited()
-      .then(function(artist, error) {
+      .then(function(artist) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -565,7 +578,8 @@ describe("getVenue", function() {
       language: "de"
     });
     setlistfmClient.getVenue()
-      .then(function(artist, error) {
+      .then(function(artist) {})
+      .catch(function(error) {
         should.fail();
       });
   });
@@ -614,7 +628,8 @@ describe("getVenueSetlists", function() {
       language: "de"
     });
     setlistfmClient.getVenueSetlists()
-      .then(function(artist, error) {
+      .then(function(artist) {})
+      .catch(function(error) {
         should.fail();
       });
   });
