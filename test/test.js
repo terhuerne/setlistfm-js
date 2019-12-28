@@ -26,9 +26,11 @@ describe("getArtist", function() {
       language: "de"
     });
     setlistfmClient.getArtist("8538e728-ca0b-4321-b7e5-cff6565dd4c0")
-      .then(function(artist, error) {
+      .then(function(artist) {
         artist.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get artist profile as XML", function() {
@@ -38,9 +40,11 @@ describe("getArtist", function() {
       language: "de"
     });
     setlistfmClient.getArtist("8538e728-ca0b-4321-b7e5-cff6565dd4c0")
-      .then(function(artist, error) {
+      .then(function(artist) {
         should.exist(artist);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get artist profile", function() {
@@ -59,9 +63,11 @@ describe("getArtistSetlists", function() {
       language: "de"
     });
     setlistfmClient.getArtistSetlists("8538e728-ca0b-4321-b7e5-cff6565dd4c0")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         setlist.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get artist setlists at 2nd page", function() {
@@ -72,9 +78,11 @@ describe("getArtistSetlists", function() {
     setlistfmClient.getArtistSetlists("8538e728-ca0b-4321-b7e5-cff6565dd4c0", {
       p: 2
     })
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         setlist.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get artist setlists as XML", function() {
@@ -84,9 +92,11 @@ describe("getArtistSetlists", function() {
       language: "de"
     });
     setlistfmClient.getArtistSetlists("8538e728-ca0b-4321-b7e5-cff6565dd4c0")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         should.exist(setlist);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get artist setlists", function() {
@@ -105,9 +115,11 @@ describe("getCity", function() {
       language: "de"
     });
     setlistfmClient.getCity("2921466")
-      .then(function(city, error) {
+      .then(function(city) {
         city.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get city as XML", function() {
@@ -117,9 +129,11 @@ describe("getCity", function() {
       language: "de"
     });
     setlistfmClient.getCity("2921466")
-      .then(function(artist, error) {
+      .then(function(artist) {
         should.exist(artist);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get city", function() {
@@ -140,9 +154,11 @@ describe("searchArtists", function() {
     setlistfmClient.searchArtists({
       artistName: "Linkin Park"
     })
-      .then(function(results, error) {
+      .then(function(results) {
         results.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get results as XML", function() {
@@ -154,9 +170,11 @@ describe("searchArtists", function() {
     setlistfmClient.searchArtists({
       artistName: "Linkin Park"
     })
-      .then(function(results, error) {
+      .then(function(results) {
         should.exist(results);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get any results", function() {
@@ -177,9 +195,11 @@ describe("searchCities", function() {
     setlistfmClient.searchCities({
       name: "Cologne"
     })
-      .then(function(results, error) {
+      .then(function(results) {
         results.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get results as XML", function() {
@@ -191,9 +211,11 @@ describe("searchCities", function() {
     setlistfmClient.searchCities({
       name: "Cologne"
     })
-      .then(function(results, error) {
+      .then(function(results) {
         should.exist(results);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get any results", function() {
@@ -212,9 +234,11 @@ describe("searchCountries", function() {
       language: "de"
     });
     setlistfmClient.searchCountries()
-      .then(function(results, error) {
+      .then(function(results) {
         results.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get results as XML", function() {
@@ -224,9 +248,11 @@ describe("searchCountries", function() {
       language: "de"
     });
     setlistfmClient.searchCountries()
-      .then(function(results, error) {
+      .then(function(results) {
         should.exist(results);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
 });
@@ -240,9 +266,11 @@ describe("searchSetlists", function() {
     setlistfmClient.searchSetlists({
       artistName: "Linkin Park"
     })
-      .then(function(results, error) {
+      .then(function(results) {
         results.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get results as XML", function() {
@@ -254,9 +282,11 @@ describe("searchSetlists", function() {
     setlistfmClient.searchSetlists({
       artistName: "Linkin Park"
     })
-      .then(function(results, error) {
+      .then(function(results) {
         should.exist(results);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get any results", function() {
@@ -277,9 +307,11 @@ describe("searchVenues", function() {
     setlistfmClient.searchVenues({
       name: "Palladium"
     })
-      .then(function(results, error) {
+      .then(function(results) {
         results.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get results as XML", function() {
@@ -291,9 +323,11 @@ describe("searchVenues", function() {
     setlistfmClient.searchVenues({
       name: "Palladium"
     })
-      .then(function(results, error) {
+      .then(function(results) {
         should.exist(results);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get any results", function() {
@@ -312,9 +346,11 @@ describe("getSetlistByVersion", function() {
       language: "de"
     });
     setlistfmClient.getSetlistByVersion("43596f23")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         setlist.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get setlist by version as XML", function() {
@@ -324,9 +360,11 @@ describe("getSetlistByVersion", function() {
       language: "de"
     });
     setlistfmClient.getSetlistByVersion("43596f23")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         should.exist(setlist);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get setlist by version", function() {
@@ -345,9 +383,11 @@ describe("getSetlist", function() {
       language: "de"
     });
     setlistfmClient.getSetlist("53e493bd")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         setlist.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get setlist as XML", function() {
@@ -357,9 +397,11 @@ describe("getSetlist", function() {
       language: "de"
     });
     setlistfmClient.getSetlist("53e493bd")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         should.exist(setlist);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get setlist", function() {
@@ -378,9 +420,11 @@ describe("getUser", function() {
       language: "de"
     });
     setlistfmClient.getUser("terhuerne")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         setlist.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get user as XML", function() {
@@ -390,9 +434,11 @@ describe("getUser", function() {
       language: "de"
     });
     setlistfmClient.getUser("terhuerne")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         should.exist(setlist);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get user", function() {
@@ -411,9 +457,11 @@ describe("getUserAttended", function() {
       language: "de"
     });
     setlistfmClient.getUserAttended("terhuerne")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         setlist.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get setlists of concerts a user has attended at 2nd page", function() {
@@ -424,9 +472,11 @@ describe("getUserAttended", function() {
     setlistfmClient.getUserAttended("terhuerne", {
       p: 2
     })
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         setlist.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get setlists of concerts a user has attended as XML", function() {
@@ -436,9 +486,11 @@ describe("getUserAttended", function() {
       language: "de"
     });
     setlistfmClient.getUserAttended("terhuerne")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         should.exist(setlist);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get setlists", function() {
@@ -457,9 +509,11 @@ describe("getUserEdited", function() {
       language: "de"
     });
     setlistfmClient.getUserEdited("terhuerne")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         setlist.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get setlists of concerts a user has edited at 2nd page", function() {
@@ -470,9 +524,11 @@ describe("getUserEdited", function() {
     setlistfmClient.getUserEdited("terhuerne", {
       p: 2
     })
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         setlist.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get setlists of concerts a user has edited as XML", function() {
@@ -482,9 +538,11 @@ describe("getUserEdited", function() {
       language: "de"
     });
     setlistfmClient.getUserEdited("terhuerne")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         should.exist(setlist);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get setlists", function() {
@@ -503,9 +561,11 @@ describe("getVenue", function() {
       language: "de"
     });
     setlistfmClient.getVenue("4bd78fbe")
-      .then(function(artist, error) {
+      .then(function(artist) {
         artist.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get venue profile as XML", function() {
@@ -515,9 +575,11 @@ describe("getVenue", function() {
       language: "de"
     });
     setlistfmClient.getVenue("4bd78fbe")
-      .then(function(artist, error) {
+      .then(function(artist) {
         should.exist(artist);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get venue profile", function() {
@@ -536,9 +598,11 @@ describe("getVenueSetlists", function() {
       language: "de"
     });
     setlistfmClient.getVenueSetlists("4bd78fbe")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         setlist.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get setlists of concerts of a venue at 2nd page", function() {
@@ -549,9 +613,11 @@ describe("getVenueSetlists", function() {
     setlistfmClient.getVenueSetlists("4bd78fbe", {
       p: 2
     })
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         setlist.should.be.an.instanceOf(Object);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Should get setlists of concerts of a venue as XML", function() {
@@ -561,9 +627,11 @@ describe("getVenueSetlists", function() {
       language: "de"
     });
     setlistfmClient.getVenueSetlists("4bd78fbe")
-      .then(function(setlist, error) {
+      .then(function(setlist) {
         should.exist(setlist);
-        error.should.equal(null);
+      })
+      .catch(function(error) {
+        error.should.equal(undefined);
       });
   });
   it("Shouldn't get setlists", function() {
