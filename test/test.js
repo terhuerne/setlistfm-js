@@ -15,10 +15,7 @@ describe("Constructor", function() {
 
   it("Should throw an error if no API key is defined", function() {
     var setlistfmClient = new setlistfm();
-
-    should(function() {
-      setlistfmClient.getArtist();
-    }).throw('SetlistFM API Error: You have to set an application key to request API.');
+    return setlistfmClient.getArtist().should.be.rejected();
   });
 });
 
