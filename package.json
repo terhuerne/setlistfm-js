@@ -34,10 +34,10 @@
     "query-string": "^5.0.1"
   },
   "devDependencies": {
-    "debug": "^2.6.8",
+    "debug": "^2.6.9",
     "diff": "^3.3.0",
     "glob": "^7.1.2",
-    "mocha": "^3.4.2",
+    "mocha": "^6.2.2",
     "should": "^11.2.1"
   }
 }
