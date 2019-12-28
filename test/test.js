@@ -48,11 +48,7 @@ describe("getArtist", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.getArtist()
-      .then(function(artist) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.getArtist().should.be.rejected();
   });
 });
 
@@ -98,11 +94,7 @@ describe("getArtistSetlists", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.getArtistSetlists()
-      .then(function(artist) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.getArtistSetlists().should.be.rejected();
   });
 });
 
@@ -135,11 +127,7 @@ describe("getCity", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.getCity()
-      .then(function(city) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.getCity().should.be.rejected();
   });
 });
 
@@ -176,11 +164,7 @@ describe("searchArtists", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.searchArtists()
-      .then(function(results) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.searchArtists().should.be.rejected();
   });
 });
 
@@ -217,11 +201,7 @@ describe("searchCities", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.searchCities()
-      .then(function(results) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.searchCities().should.be.rejected();
   });
 });
 
@@ -284,11 +264,7 @@ describe("searchSetlists", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.searchSetlists()
-      .then(function(results, error) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.searchSetlists().should.be.rejected();
   });
 });
 
@@ -325,11 +301,7 @@ describe("searchVenues", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.searchVenues()
-      .then(function(results, error) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.searchVenues().should.be.rejected();
   });
 });
 
@@ -362,11 +334,7 @@ describe("getSetlistByVersion", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.getSetlistByVersion()
-      .then(function(setlist) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.getSetlistByVersion().should.be.rejected();
   });
 });
 
@@ -399,11 +367,7 @@ describe("getSetlist", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.getSetlist()
-      .then(function(setlist) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.getSetlist().should.be.rejected();
   });
 });
 
@@ -436,11 +400,7 @@ describe("getUser", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.getUser()
-      .then(function(setlist) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.getUser().should.be.rejected();
   });
 });
 
@@ -486,11 +446,7 @@ describe("getUserAttended", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.getUserAttended()
-      .then(function(artist) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.getUserAttended().should.be.rejected();
   });
 });
 
@@ -536,11 +492,7 @@ describe("getUserEdited", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.getUserEdited()
-      .then(function(artist) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.getUserEdited().should.be.rejected();
   });
 });
 
@@ -573,11 +525,7 @@ describe("getVenue", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.getVenue()
-      .then(function(artist) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.getVenue().should.be.rejected();
   });
 });
 
@@ -623,10 +571,6 @@ describe("getVenueSetlists", function() {
       key: process.env.SETLISTFM_KEY,
       language: "de"
     });
-    setlistfmClient.getVenueSetlists()
-      .then(function(artist) {})
-      .catch(function(error) {
-        should.fail();
-      });
+    return setlistfmClient.getVenueSetlists().should.be.rejected();
   });
 });
